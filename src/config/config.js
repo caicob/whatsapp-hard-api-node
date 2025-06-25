@@ -16,7 +16,7 @@ const audioMimeTypes = process.env.audioMimeTypes?.split(',')
 const documentMimeTypes = process.env.documentMimeTypes?.split(',')
 const imageMimeTypes = process.env.imageMimeTypes?.split(',')
 const IGNORE_GROUPS = process.env.IGNORE_GROUPS
-const APP_URL = process.env.APP_URL || false
+const APP_URL = (process.env.VERCEL ? process.env.APP_URL : process.env.APP_URL) || false;
 
 const LOG_LEVEL = process.env.LOG_LEVEL
 

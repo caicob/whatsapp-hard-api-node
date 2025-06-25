@@ -1622,7 +1622,7 @@ async DownloadProfile(of,group=false) {
 	}
 	catch(e)
 	{
-	return process.env.APP_URL+'/img/noimage.jpg'
+	    return process.env.VERCEL ? process.env.APP_URL+'/img/noimage.jpg' : process.env.APP_URL+'/img/noimage.jpg'
 	}
 }
 
